@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?5wh30e');
+  src:  url('fonts/icomoon.eot?5wh30e#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5wh30e') format('truetype'),
+    url('fonts/icomoon.woff?5wh30e') format('woff'),
+    url('fonts/icomoon.svg?5wh30e#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-presentation-exhibition-svgrepo-com:before {
+  content: "\e906";
+}
+.icon-electric-guitar-with-sharp-tip-edges-for-rockstar-svgrepo-com:before {
+  content: "\e905";
+}
+.icon-two-childs-playing-silhouettes-svgrepo-com:before {
+  content: "\e903";
+}
+.icon-family-svgrepo-com:before {
+  content: "\e902";
+}
+.icon-party-svgrepo-com:before {
+  content: "\e901";
+}
+.icon-sports_baseball:before {
+  content: "\e904";
+}
+.icon-plus:before {
+  content: "\e900";
+}

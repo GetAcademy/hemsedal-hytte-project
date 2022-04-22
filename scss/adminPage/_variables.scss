@@ -1,0 +1,17 @@
+
+$secondary-color:#007bff;
+$primary-color:#E6E6E6;
+
+$primary-color-dark:darken($primary-color,10%);
+$primary-color-light:lighten($primary-color,10%);
+$secondary-color-dark:darken($secondary-color,10%);
+$secondary-color-light:lighten($secondary-color,10%);
+$primary-font-color:#6e7375;//bunun darkini  yapip darkini kullanalim....
+$primary-font-color-dark:darken($primary-font-color,10%);
+$secondary-font-color:lightgray;
+
+
+
+
+//Ana ve genel kullanacagimiz renkleri bu sekilde variable olarak tutariz ama spesific renkleri direk yazabiliriz..
+//beyaz ve siyah icin de bir degisken dusunur muyuz...

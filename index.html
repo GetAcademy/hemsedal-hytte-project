@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--CategoryIcon links-->
+    <link rel="stylesheet" href="icons/categoryIcons/childrenAndFamily/style.css">
+    <link rel="stylesheet" href="icons/categoryIcons/concert/style.css">
+    <link rel="stylesheet" href="icons/categoryIcons/exhibition/style.css">
+    <link rel="stylesheet" href="icons/categoryIcons/familyAndEnjoy/style.css">
+    <link rel="stylesheet" href="icons/categoryIcons/festival/style.css">
+    <link rel="stylesheet" href="icons/categoryIcons/sport/style.css">
+    <link rel="stylesheet" href="icons/categoryIcons/theater/style.css">
+    <link rel="stylesheet" href="icons/modalCancelIcon/style.css">
+    <link rel="stylesheet" href="/css/main.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  <!--Font-awesome kit code-->
+    <script src="https://kit.fontawesome.com/05902d1e0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./icons/successCheckBoxIcon/style.css">
+    <link rel="stylesheet" href="./icons/createHappeningIcon/style.css">
+    <script src="./js/model.js"></script>
+    <script src="js/common.js"></script>
+    <script src="./js/admin/adminController.js"></script>
+    <script src="./js/admin/adminView.js"></script>
+    <script src="./js/user/userController.js"></script>
+    <script src="./js/user/userView.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+  <script>
+
+function runSlider(){
+  let span=document.getElementsByClassName("span");
+let cartContainer = document.getElementsByClassName('extraPaid-container-cart');
+let numberByBox=cartContainer.length;
+let cartContainer_page=Math.ceil(cartContainer.length/3);
+let l=0;
+let movePer = 33.44;
+	let maxMove = (numberByBox-2)*33;
+	// mobile_view	
+	let mob_view = window.matchMedia("(max-width: 1090px)");
+  if (mob_view.matches)
+	 {
+	 	movePer = 49.5;
+	 maxMove = (numberByBox-1)*48.5;
+	 }
+   let mob_view2 = window.matchMedia("(max-width: 720px)");
+if (mob_view2.matches)
+ {
+   movePer = 98.5;
+   maxMove = numberByBox*98;
+ }
+   let right_mover = ()=>{
+		l = l + movePer;
+		if (cartContainer_page == 1){l = 0; }
+    for(let i=0; i<cartContainer.length; i++)
+		{
+      let item=cartContainer[i];
+			if (l > maxMove){
+        l = l - movePer;
+        l=0;
+      }
+			item.style.left = '-' + l + '%';
+		}
+	}
+
+  let left_mover = ()=>{
+		l = l - movePer;
+		if (l<=0){l = 0;}
+		for(const i of cartContainer){
+			if (cartContainer_page>1){
+				i.style.left = '-' + l + '%';
+			}
+		}
+	}
+	span[1].onclick = ()=>{right_mover();}
+	span[0].onclick = ()=>{left_mover();}
+      
+    }
+
+
+
+updateView();
+      function updateView() {
+        let { page } = model.app;
+        switch (page) {
+          case "user":
+            return updateUserView();
+          case "admin":
+            return updateAdminView();
+        }  
+      }
+
+      localStorage.setItem("happenings",JSON.stringify(model.data.happenings));
+      
+</script>
+</body>
+</html>
+
+
+
+
+  
+

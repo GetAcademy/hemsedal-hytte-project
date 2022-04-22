@@ -1,0 +1,19 @@
+@import "./adminPage/variables";
+@import "./common/mixins";//Bunu en basa koymamiz gerekebilir
+@import "./common/reset";
+@import "./common/utilities";
+@import "./common/typography";
+@import "./adminPage/animations";
+@import "./adminPage/components";
+@import "./adminPage/layouts";
+@import "./adminPage/adminPage";
+/*userPage scss files*/
+@import "./userPage/variables";
+@import "./userPage/typography";
+@import "./userPage/animations";
+@import "./userPage/components";
+
+@import "./userPage/layouts";
+
+@import "./userPage/userPage";
+

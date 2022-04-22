@@ -1,0 +1,28 @@
+@keyframes textFromLeft {
+    0% {
+transform: translateX(-50%);
+    }
+
+    70% {
+        transform: translateX(20%);
+    }
+
+100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes textFromRight {
+    0% {
+transform: translateX(50%);
+    }
+
+    70% {
+        transform: translateX(-20%);
+    }
+
+100%{
+        transform: translateX(0);
+    }
+}
+
